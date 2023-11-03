@@ -17,3 +17,12 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Customer {
+  createdAt DateTime @default(now())
+  email     String?
+  id        String   @id @default(cuid())
+  mobile    String?
+  name      String?
+  updatedAt DateTime @updatedAt
+}
